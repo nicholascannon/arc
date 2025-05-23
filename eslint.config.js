@@ -60,7 +60,14 @@ export default tseslint.config(
             order: 'asc',
           },
           'newlines-between': 'always',
-          groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
+          groups: ['builtin', 'external', 'parent', 'sibling', 'index', 'type'],
+          pathGroups: [
+            {
+              pattern: '*.css',
+              group: 'type',
+              position: 'after',
+            },
+          ],
           warnOnUnassignedImports: true,
         },
       ],
