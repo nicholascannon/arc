@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { Pressable, Text, View } from 'react-native';
 
-export function Home() {
+export function HomeScreen() {
   const { navigate } = useNavigation();
 
   return (

@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { Pressable, Text, View } from 'react-native';
 
-export function Details() {
+export function DetailsScreen() {
   const { goBack } = useNavigation();
 
   return (
