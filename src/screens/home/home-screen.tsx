@@ -1,14 +1,16 @@
 import { useNavigation } from '@react-navigation/native';
-import { Pressable, Text } from 'react-native';
+import { Pressable } from 'react-native';
 
-import { Screen } from '@/components/ui/screen';
+import { Screen } from '@/components/screen';
+import { Heading } from '@/components/ui/heading';
+import { Text } from '@/components/ui/text';
 
 export function HomeScreen() {
   const { navigate } = useNavigation();
 
   return (
     <Screen>
-      <Text className="text-2xl font-bold">Hello World!</Text>
+      <Heading size="5xl">Hello World!</Heading>
 
       <Pressable onPress={() => navigate('Details')}>
         <Text>Go details</Text>
