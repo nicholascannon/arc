@@ -1,16 +1,10 @@
-import { useNavigation } from '@react-navigation/native';
-import { Pressable, Text } from 'react-native';
-
 import { Screen } from '@/components/screen';
+import { Heading } from '@/components/ui/heading';
 
 export function DetailsScreen() {
-  const { goBack } = useNavigation();
-
   return (
-    <Screen>
-      <Pressable onPress={() => goBack()}>
-        <Text>Go home</Text>
-      </Pressable>
+    <Screen showHeader>
+      <Heading size="2xl">Details</Heading>
     </Screen>
   );
 }
