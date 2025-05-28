@@ -29,7 +29,7 @@ export function Screen({
         }}
       />
       {showHeader && (
-        <View className="w-full">
+        <View className="w-full pb-6">
           <Pressable className="w-8 h-8" onPress={() => goBack()}>
             <Icon as={ChevronLeftIcon} className="w-8 h-8" />
           </Pressable>
