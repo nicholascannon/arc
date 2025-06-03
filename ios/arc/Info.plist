@@ -27,7 +27,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>com.anonymous.arc</string>
+          <string>com.nicholascannon.arc</string>
         </array>
       </dict>
       <dict>
