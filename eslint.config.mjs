@@ -9,7 +9,7 @@ import react from 'eslint-plugin-react';
 import reactNative from 'eslint-plugin-react-native';
 
 export default tseslint.config(
-  { ignores: ['node_modules/**', '.expo/**'] },
+  { ignores: ['node_modules/**', '.expo/**', './src/components/ui/**'] },
   {
     extends: [
       js.configs.recommended,
