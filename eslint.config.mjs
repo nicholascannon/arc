@@ -49,7 +49,10 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-native/no-inline-styles': 'warn',
       'react-native/no-color-literals': 'warn',
-      'react-native/no-raw-text': ['error', { skip: ['Text', 'Heading'] }],
+      'react-native/no-raw-text': [
+        'error',
+        { skip: ['Text', 'Heading', 'ButtonText'] },
+      ],
       'react-native/no-single-element-style-arrays': 'warn',
 
       // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md

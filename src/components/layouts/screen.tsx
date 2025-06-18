@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import { Pressable, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { ChevronLeftIcon, Icon } from './ui/icon';
+import { ChevronLeftIcon, Icon } from '../ui/icon';
 
 export function Screen({
   children,
@@ -16,7 +16,7 @@ export function Screen({
   const { goBack } = useNavigation();
 
   return (
-    <SafeAreaView className="flex-1 p-2 pt-4">
+    <SafeAreaView className="flex-1 pt-4 gap-4">
       <LinearGradient
         colors={['#1a237e', '#4a148c', '#000000']}
         // eslint-disable-next-line react-native/no-inline-styles
@@ -29,14 +29,14 @@ export function Screen({
         }}
       />
       {showHeader && (
-        <View className="w-full pb-6">
-          <Pressable className="w-8 h-8" onPress={() => goBack()}>
+        <View>
+          <Pressable className="w-8 h-8" onPress={goBack}>
             <Icon as={ChevronLeftIcon} className="w-8 h-8" />
           </Pressable>
         </View>
       )}
 
-      {children}
+      <View className="flex-1">{children}</View>
     </SafeAreaView>
   );
 }

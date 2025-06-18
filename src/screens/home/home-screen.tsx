@@ -1,9 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
-import { Pressable } from 'react-native';
 
-import { Screen } from '@/components/screen';
+import { Screen } from '@/components/layouts/screen';
+import { Button, ButtonIcon, ButtonText } from '@/components/ui/button';
 import { Heading } from '@/components/ui/heading';
-import { Text } from '@/components/ui/text';
+import { ChevronRightIcon } from '@/components/ui/icon';
 
 export function HomeScreen() {
   const { navigate } = useNavigation();
@@ -12,9 +12,10 @@ export function HomeScreen() {
     <Screen>
       <Heading size="5xl">Hello World!</Heading>
 
-      <Pressable onPress={() => navigate('Details')}>
-        <Text>Go details</Text>
-      </Pressable>
+      <Button size="xl" variant="outline" onPress={() => navigate('Details')}>
+        <ButtonText>Go details</ButtonText>
+        <ButtonIcon as={ChevronRightIcon} />
+      </Button>
     </Screen>
   );
 }
